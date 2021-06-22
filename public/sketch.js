@@ -1,16 +1,19 @@
-
-var hashGenesis = document.getElementById("formulario"); 
-
-var hash = 'hash, este es un hash para generar más objetos' ;
+var hash = 'Este debería ser un hash ' ;
 var leng = hash.length;
 var obj = new Array(leng);
 var caract = new Array(leng);
 var offset = 2;
-  
+var canvas;
 
+function windowResized(){
+    resiezeCanvas(windowWidth,windowHeight);
+}
 
 function setup(){
-    createCanvas(400,400);
+    canvas = createCanvas(windowWidth,windowHeight);
+    canvas.position(0,0);
+    canvas.style('z-index','-1');
+    
     background(0);
     for (var i=0; i<obj.length; i++ )
     {
@@ -71,7 +74,4 @@ class Objeto {
         
         this.acc = 0;
     }
-
-    
-
 }

@@ -1,4 +1,5 @@
 import {SHA256}from 'crypto-js';
+
 class Block
 {
     constructor(timestamp,previousHash,hash,data)
@@ -42,4 +43,5 @@ class Block
         ;`
     }
 }
+
 export default Block;
